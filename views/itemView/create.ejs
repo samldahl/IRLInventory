@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Add New Item</title>
+    <link rel="stylesheet" href="/style.css">
+</head>
+<body>
+    <a href="/items" class="back-button">← Back</a>
+    <div class="container">
+        <h1>Add New Item</h1>
+        <form action="/items" method="POST">
+            <label for="name">Name:</label>
+            <input type="text" id="name" name="name" required>
+
+            <label for="category">Category:</label>
+            <input type="text" id="category" name="category">
+            
+            <label for="weight">Weight (kg):</label>
+            <input type="number" id="weight" name="weight" step="0.1">
+            
+            <label for="size">Size:</label>
+            <select id="size" name="size">
+                <option value="Small">Small</option>
+                <option value="Medium">Medium</option>
+                <option value="Large">Large</option>
+            </select>
+            
+            <label for="lastSeen">Last Seen:</label>
+            <input type="text" id="lastSeen" name="lastSeen">
+            
+            <label>
+                <input type="checkbox" name="isDailyUse">
+                Daily Use
+            </label>
+            
+            <label>
+                <input type="checkbox" name="fraglie">
+                Fragile
+            </label>            
+            <button type="submit">Create Item</button>
+        </form>
+    </div>
+</body>
+</html>

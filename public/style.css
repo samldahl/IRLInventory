@@ -1,0 +1,249 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Courier New', Courier, monospace;
+    background: #f5f5f5 100%;
+    color: #333;
+    min-height: 100vh;
+    padding: 20px;
+}
+
+.container {
+    width: 100%;
+    background: white;
+    border-radius: 12px;
+    padding: 60px;
+    margin: 50px;
+}
+
+.header {
+    margin-bottom: 40px;
+    border-bottom: 2px solid #e0e0e0;
+    padding-bottom: 30px;
+}
+
+.title {
+    font-size: 3.5rem;
+    font-weight: bold;
+    color: #2c3e50;
+    margin-bottom: 10px;
+}
+
+.subtitle {
+    font-size: 1.2rem;
+    color: #27ae60;
+    font-weight: 500;
+}
+
+.version {
+    position: absolute;
+    top: 40px;
+    right: 60px;
+    color: #95a5a6;
+    padding: 8px 16px;
+    border: 1px solid #e0e0e0;
+    border-radius: 20px;
+    background: #f8f9fa;
+}
+
+.content {
+    margin-top: 40px;
+}
+
+.content h2 {
+    font-size: 1.8rem;
+    color: #2c3e50;
+    margin-bottom: 30px;
+    padding-bottom: 15px;
+    border-bottom: 1px solid #ecf0f1;
+}
+
+.command-list {
+    margin-bottom: 30px;
+}
+
+
+.prompt {
+    color: #27ae60;
+    font-size: 1.3rem;
+    font-weight: bold;
+    margin-right: 15px;
+}
+
+.command-text {
+    color: #2c3e50;
+    font-weight: bold;
+    font-size: 1.1rem;
+    margin-right: 15px;
+}
+
+.description {
+    color: #7f8c8d;
+    font-style: italic;
+}
+
+.info-text {
+    margin: 20px 0;
+    padding: 20px;
+    background: white;
+    border: 1px solid #e0e0e0;
+    border-radius: 8px;
+}
+
+.info-text p {
+    color: #34495e;
+    margin: 8px 0;
+    padding-left: 25px;
+    position: relative;
+}
+
+.info-text p::before {
+    content: "•";
+    position: absolute;
+    left: 8px;
+    color: #27ae60;
+    font-size: 1.2rem;
+}
+
+.link {
+    display: inline-block;
+    color: #252525;
+    font-weight: 600;
+    padding: 10px 20px;
+    border-radius: 6px;
+    margin-top: 20px;
+}
+
+.back-button {
+    position: absolute;
+    top: 20px;
+    left: 20px;
+    display: inline-flex;
+    align-items: center;
+    color: #2c3e50;
+    font-weight: 600;
+    padding: 10px 16px;
+    border-radius: 6px;
+}
+
+.back-button:hover {
+    background: #f8f9fa;
+    color: #1f2f26;
+    transform: translateX(-3px);
+}
+
+/* Table Styles */
+table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 30px;
+    box-shadow: 0 2px 15px rgba(143, 126, 126, 0.08);
+    border-radius: 8px;
+    overflow: hidden;
+}
+
+thead {
+    background: #b4b3b3,
+}
+
+thead th {
+    padding: 18px 20px;
+    text-align: left;
+    font-weight: 600;
+    font-size: 0.95rem;
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+}
+
+tbody tr {
+    border-bottom: 1px solid #ecf0f1;
+    transition: all 0.3s ease;
+    cursor: pointer;
+}
+
+tbody tr:hover {
+    background: #ffffff;
+    transform: scale(1.01);
+}
+
+tbody tr:last-child {
+    border-bottom: none;
+}
+
+tbody td {
+    padding: 16px 20px;
+    color: #2c3e50;
+    font-size: 0.95rem;
+}
+
+tbody td:first-child {
+    font-weight: 600;
+    color: #383838;
+}
+
+.container h1 {
+    font-size: 2.5rem;
+    color: #2c3e50;
+    margin-bottom: 10px;
+    font-weight: bold;
+}
+
+@media (max-width: 768px) {
+    .container {
+        padding: 30px;
+    }
+    
+    .title {
+        font-size: 2.5rem;
+    }
+    
+    .version {
+        position: static;
+        display: inline-block;
+        margin-bottom: 20px;
+    }
+    
+    table {
+        font-size: 0.85rem;
+    }
+    
+    thead th, tbody td {
+        padding: 12px 10px;
+    }
+}
+
+/* Form Styles */
+form div {
+    margin-bottom: 10px;
+}
+
+form label {
+    display: block;
+    margin-bottom: 5px;
+}
+
+form input[type="text"],
+form input[type="password"],
+form input[type="number"],
+form select {
+    width: 100%;
+    padding: 8px;
+    border: 1px solid #ccc;
+}
+
+form button {
+    padding: 10px 20px;
+    background: #27ae60;
+    color: white;
+    border: none;
+    cursor: pointer;
+    margin-top: 10px;
+}
+
+form button:hover {
+    background: #229954;
+}

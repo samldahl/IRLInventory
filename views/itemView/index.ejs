@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Item List</title>
+    <link rel="stylesheet" href="/style.css">
+</head>
+<body>
+    <a href="/" class="back-button">← Home</a>
+    <div class="container">
+        <h1>Inventory Items</h1>
+        <table>
+            <thead>
+                <tr>
+                    <th>Name</th>
+                    <th>Daily Use</th>
+                    <th>Weight (kg)</th>
+                    <th>Size</th>
+                    <th>Fragile</th>
+                    <th>Last Seen</th>
+                </tr>
+            </thead>
+            <tbody>
+                <% items.forEach(item => { %>
+                    <tr onclick="window.location.href='/items/<%= item._id %>'">
+                        <td><%= item.name %></td>
+                        <td><%= item.isDailyUse ? 'Yes' : 'No' %></td>
+                        <td><%= item.weight %></td>
+                        <td><%= item.size %></td>
+                        <td><%= item.fraglie ? 'Yes' : 'No' %></td>
+                        <td><%= item.lastSeen %></td>
+                    </tr>
+                <% }) %>
+            </tbody>
+        </table>
+    </div>
+</body>
+</html>

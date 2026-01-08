@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title><%= item.name %></title>
+    <link rel="stylesheet" href="/style.css">
+</head>
+<body>
+    <a href="/items" class="back-button">← Back</a>
+    <div class="container">
+        <h1><%= item.name %></h1>
+        <div class="item-details">
+            <p><strong>Daily Use:</strong> <%= item.isDailyUse ? 'Yes' : 'No' %></p>
+            <p><strong>Weight:</strong> <%= item.weight %> kg</p>
+            <p><strong>Size:</strong> <%= item.size %></p>
+            <p><strong>Fragile:</strong> <%= item.fraglie ? 'Yes' : 'No' %></p>
+            <p><strong>Last seen:</strong> <%= item.lastSeen %></p>
+            <p><strong>Category:</strong> <%= item.category %></p>
+        </div>
+         <a href="/items/<%=item._id%>/edit" class="link">Edit item</a>
+    </div>
+</body>
+</html>
