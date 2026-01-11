@@ -7,14 +7,20 @@
     <link rel="stylesheet" href="/style.css">
 </head>
 <body>
+    <div class="header-links">
+        <a href="/items" class="link">View All Items</a>
+        <a href="/items/new" class="link">Add New Item</a>
+    </div>
     <div class="container">
         <div class="header">
-            <h1 class="title">Inventory List</h1>
-            <p class="subtitle">A list of stuff</p>
+            <div>
+                <h1 class="title">Inventory managment Tool</h1>
+                <p class="subtitle">currently logged in as <%=user.username%></p>
+            </div>
         </div>
-        
+            <p class="subtitle">A list of stuff</p>
         <div class="content">
-            <h2>Get started</h2>
+            <h2>Getting started</h2>
             
             <div class="info-text">
                 <p><strong>View all items</strong> - Browse your complete inventory with details</p>
@@ -23,17 +29,12 @@
                 <p><strong>Delete items</strong> - Remove items you no longer need to track</p>
             </div>
             
-            <h3>Features</h3>
+            <h3>Notable Features</h3>
             <div class="info-text">
                 <p>Track item name, weight, size, and category</p>
                 <p>Mark items as daily use or fragile</p>
                 <p>Record last seen location for easy finding</p>
                 <p>Click any item to view full details</p>
-            </div>
-            
-            <div style="margin-top: 40px;">
-                <a href="/items" class="link">View All Items</a>
-                    <a href="/items/new" class="link" style="margin-left: 10px;">Add New Item</a>
             </div>
         </div>
     </div>

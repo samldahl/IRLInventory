@@ -21,9 +21,19 @@ body {
 }
 
 .header {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
     margin-bottom: 40px;
     border-bottom: 2px solid #e0e0e0;
     padding-bottom: 30px;
+}
+
+.header-links {
+    display: flex;
+    flex-direction: row-reverse;
+    gap: 10px;
+    align-items: right;
 }
 
 .title {
@@ -35,7 +45,7 @@ body {
 
 .subtitle {
     font-size: 1.2rem;
-    color: #27ae60;
+    color: #2a2a2a;
     font-weight: 500;
 }
 
