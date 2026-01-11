@@ -63,5 +63,10 @@ res.redirect("/");
 
 });
 
+router.post('/sign-out', (req, res) => {
+  req.session.destroy();
+  res.redirect('/');
+});
+
 module.exports = router;
 
