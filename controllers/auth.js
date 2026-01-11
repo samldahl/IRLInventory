@@ -13,9 +13,9 @@ router.get("/sign-up", (req, res) => {
 //POST
 router.post("/sign-up", async (req, res) => {
 // User Exist or Not
-  const userInDatabase = await User.findOne({ username: req.body.username });
+  const userInDatabase = await User.findOne({ email: req.body.email });
 if (userInDatabase) {
-  return res.send("Username already taken.");
+  return res.send("Email already taken.");
 }
 
 
@@ -38,7 +38,9 @@ router.get("/sign-in", (req, res) => {
 
 // POST /auth/signin
 router.post("/sign-in", async (req, res) => {
-    const userInDatabase = await User.findOne({ username: req.body.username });
+    console.log("Login attempt with email:", req.body.email);
+    const userInDatabase = await User.findOne({ email: req.body.email });
+    console.log("User found:", userInDatabase ? "Yes" : "No");
 if (!userInDatabase) {
   return res.send("Login failed. Please try again.");
 }
@@ -47,6 +49,7 @@ const validPassword = bcrypt.compareSync(
   req.body.password,
   userInDatabase.password
 );
+    console.log("Password valid:", validPassword);
 if (!validPassword) {
   return res.send("Login failed. Please try again.");
 }
