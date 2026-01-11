@@ -59,8 +59,14 @@ function isSignedIn(req, res, next) {
 }
 
 //GET ROOT Proejct ./
-app.get("/", (req, res) => {
-    res.render('index.ejs', { user: req.session.user });
+app.get("/", async (req, res) => {
+  if (req.session.user) {
+    res.render("index.ejs", {
+      user: req.session.user
+    });
+  } else {
+    res.render("auth/sign-in.ejs")
+  }
 });
 
 // GET /items protected route
