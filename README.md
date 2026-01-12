@@ -18,3 +18,15 @@ npm install
 ## Usage
 
 Follow the instructions in the application to manage your inventory.
+
+## Technology used
+
+- **bcrypt** (6.0.0) - Password hashing and authentication
+- **dotenv** (17.2.3) - Environment variable management
+- **ejs** (3.1.10) - Templating engine for dynamic HTML
+- **express** (5.2.1) - Web application framework
+- **express-session** (1.18.2) - Session middleware for user authentication
+- **method-override** (3.0.0) - HTTP method override for RESTful routing
+- **mongoose** (9.0.2) - MongoDB object modeling
+- **morgan** (1.10.1) - HTTP request logger middleware
+
