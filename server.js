@@ -112,6 +112,12 @@ app.put("/items/:id", isSignedIn, async (req, res) => {
   res.redirect(`/items/${req.params.id}`);
 });
 
+// DELETE /items/:id protected route
+app.delete("/items/:id", isSignedIn, async (req, res) => {
+  await Items.findByIdAndDelete(req.params.id);
+  res.redirect("/items");
+});
+
 
 app.listen(3333, () => {
   console.log("Listening on port 3333");

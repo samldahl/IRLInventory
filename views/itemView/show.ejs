@@ -18,7 +18,11 @@
             <p><strong>Last seen:</strong> <%= item.lastSeen %></p>
             <p><strong>Category:</strong> <%= item.category %></p>
         </div>
-         <a href="/items/<%=item._id%>/edit" class="link">Edit item</a>
+        <a href="/items/<%=item._id%>/edit" class="link">Edit item</a>
+        <form action="/items/<%=item._id%>?_method=DELETE" method="POST">
+            <button type="submit" class="link">Delete item</button>
+        </form>
+
     </div>
 </body>
 </html>
