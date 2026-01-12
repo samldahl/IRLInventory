@@ -10,6 +10,11 @@ const itemSchema = new mongoose.Schema({
     fraglie: Boolean,
     lastSeen: String,
     category: String,
+    userID: {
+        type: mongoose.Schema.Types.ObjectId,
+        ref: 'User',
+        required: true
+    }
 
 })
 
@@ -17,7 +22,4 @@ const item = mongoose.model('items', itemSchema)
 
 //export to world
 module.exports = item
-
-
-
 

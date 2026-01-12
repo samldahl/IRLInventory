@@ -71,7 +71,7 @@ app.get("/", async (req, res) => {
 
 // GET /items protected route
 app.get("/items", isSignedIn, async (req, res) => {
-  const allItems = await Items.find();
+  const allItems = await Items.find({ userID: req.session.user._id });
   res.render("itemView/index.ejs", { items: allItems });
 });
 
@@ -84,6 +84,7 @@ app.get("/items/new", isSignedIn, (req, res) => {
 app.post("/items", isSignedIn, async (req, res) => {
   req.body.isDailyUse = req.body.isDailyUse === "on";
   req.body.fraglie = req.body.fraglie === "on";
+  req.body.userID = req.session.user._id;
   
   const newItem = await Items.create(req.body);
   res.redirect(`/items/${newItem._id}`);
