@@ -119,8 +119,8 @@ app.delete("/items/:id", isSignedIn, async (req, res) => {
 });
 
 
+const port = process.env.PORT || 3333;
 app.listen(PORT, () => {
-  const port = process.env.PORT || 3333;
   console.log("Listening on port 3333");
 });
 
