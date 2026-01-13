@@ -9,6 +9,7 @@ const session = require("express-session");
 // const ejs = require("ejs")
 
 const app = express();
+const PORT = process.env.PORT || 3333;
 
 mongoose.connect(process.env.MONGODB_URI)
 
@@ -119,7 +120,6 @@ app.delete("/items/:id", isSignedIn, async (req, res) => {
 });
 
 
-const PORT = process.env.PORT || 3333;
 app.listen(PORT, () => {
   console.log("Listening on port 3333");
 });
