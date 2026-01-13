@@ -22,10 +22,10 @@ app.use(express.urlencoded({ extended: false }));
 app.use(methodOverride("_method"));
 // Morgan for logging HTTP requests
 app.use(morgan('dev'));
-//cookies
+
 app.use(methodOverride("_method"));
 app.use(morgan('dev'));
-// new
+
 app.use(
   session({
     secret: process.env.SESSION_SECRET,
@@ -40,9 +40,9 @@ const Items = require("./models/items.js");
 const authController = require("./controllers/auth.js");
 
 app.use(express.urlencoded({ extended: false }));
-app.use(methodOverride("_method")); // new
-app.use(morgan("dev")); //new
-app.use(express.static("public")); // Serve static files
+app.use(methodOverride("_method")); 
+app.use(morgan("dev")); 
+app.use(express.static("public")); 
 
 
 app.set("view engine", "ejs");
@@ -120,6 +120,7 @@ app.delete("/items/:id", isSignedIn, async (req, res) => {
 
 
 app.listen(3333, () => {
+  const port = process.env.PORT || 3333;
   console.log("Listening on port 3333");
 });
 
